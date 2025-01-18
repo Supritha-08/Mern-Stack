@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">   
+    <script>
+    // Get the canvas element
+    var c = document.getElementById("mycanvas");
+    var ctx = c.getContext("2d");
+    ctx.moveTo(0, 0); // Starting point
+    ctx.lineTo(200, 100); // Ending point
+    ctx.stroke();
+    </script>
+     </head>
+    <title>My Webpage</title>
+    <body>
+        <form>
+            <label for="Birthday">birthday</label>
+            <input type="date" name="birthday" /><br/><br/>
+
+            <label for="datetime">DateTime</label>
+            <input type="datetime" name="datetime"/><br/><br/>
+
+            <label for="Quantity">Quantity</label>
+            <input type="number" id="qty" name="quantity" min="1" max="5"/>
+
+            <label for="vol">Volume(b/w 0 to 50)</label>
+            <input type="range" id="vol" name="vol" min="0" max="50"/><br/>
+
+            <label for="Search" >Search Text</label>
+            <input type="search" id="gsearch" name="gsearch"/>
+
+
+            //REcommendations
+            <br/><br/>
+            <!-- <label for="browsers">Choose Your Browsers</label>
+            <input list="browsers" name="browsers" id="browsers"/>
+            <datalist id="browsers" name="browsers">
+                <option value="Edge"></option>
+                <option value="chrome"></option>
+                <option value="Firefox"></option>
+            </datalist> -->
+            <label for="browser">Choose your browser:</label>
+            <input list="browsers" id="browser" name="browser" >
+            <datalist id="browsers">
+                <option value="Edge">
+                <option value="Chrome">
+                <option value="Firefox">
+            </datalist>
+        <input type="button" value="submit" onlick="msg()"/>    
+        
+         </form>
+
+         <h1>canvas</h1>
+         <canvas id="mycanvas" width="200" height="100" style="border:1 px solid"></canvas>
+
+
+    </body>
+</html>
